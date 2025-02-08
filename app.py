@@ -28,7 +28,7 @@ def user(name):
     return render_template('user.html', name=name)
 
 @app.route('/visa')
-def user():
+def visa():
     return render_template('visa.html')
 
 if __name__ == '__main__':
