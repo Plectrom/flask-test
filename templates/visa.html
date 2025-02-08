@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestoría Visa B1/B2 - Asesoría Profesional</title>
+    <style>
+        /* CSS Reseteo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e8491d;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #35424a;
+        }
+
+        ul {
+            list-style-type: square;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #35424a;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e8491d;
+        }
+
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer ul {
+            list-style-type: none;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        footer .social-media a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .social-media a:hover {
+            color: #e8491d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Asesoría y Gestión para Visa B1/B2 de Estados Unidos</h1>
+        <p>Facilitamos el proceso de solicitud de tu visa para que puedas concentrarte en lo que realmente importa.</p>
+        <a href="#formulario-solicitud" class="cta-button">Solicita tu Visa Ahora</a>
+    </header>
+
+    <!-- Servicios -->
+    <section id="servicios">
+        <h2>¿Qué Ofrecemos?</h2>
+        <p>Ofrecemos un servicio completo de gestión para la obtención de la Visa B1/B2, incluyendo la asistencia en la
+            preparación del formulario y la programación de la cita en el consulado.</p>
+        <ul>
+            <li>Asesoría personalizada</li>
+            <li>Rellenado del formulario DS-160</li>
+            <li>Programación de cita en el consulado</li>
+            <li>Soporte continuo hasta obtener la visa</li>
+        </ul>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <blockquote>
+            <p>"Gracias a su ayuda, el proceso fue rápido y sin complicaciones. ¡Totalmente recomendado!"</p>
+            <footer>- Juan Pérez</footer>
+        </blockquote>
+        <blockquote>
+            <p>"Excelente servicio, muy profesionales y atentos a cada detalle."</p>
+            <footer>- María López</footer>
+        </blockquote>
+    </section>
+
+    <!-- Formulario de Solicitud -->
+    <section id="formulario-solicitud">
+        <h2>Solicita tu Visa B1/B2</h2>
+        <form action="/enviar-solicitud" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="pasaporte">Número de Pasaporte:</label>
+            <input type="text" id="pasaporte" name="pasaporte" required>
+
+            <label for="fecha-cita">Fecha Deseada para la Cita:</label>
+            <input type="date" id="fecha-cita" name="fecha-cita" required>
+
+            <label for="informacion-adicional">Información Adicional:</label>
+            <textarea id="informacion-adicional" name="informacion-adicional"></textarea>
+
+            <!-- Integración de Pago -->
+            <h3>Pago por Servicios</h3>
+            <p>Precio del Servicio: $150 USD</p>
+
+            <!-- Botón de Pago con PayPal -->
+            <div id="paypal-button-container"></div>
+
+            <button type="submit">Enviar Solicitud</button>
+        </form>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta? Contáctanos para más información.</p>
+        <form action="/enviar-consulta" method="POST">
+            <label for="consulta-nombre">Nombre:</label>
+            <input type="text" id="consulta-nombre" name="consulta-nombre" required>
+
+            <label for="consulta-email">Correo Electrónico:</label>
+            <input type="email" id="consulta-email" name="consulta-email" required>
+
+            <label for="consulta-mensaje">Mensaje:</label>
+            <textarea id="consulta-mensaje" name="consulta-mensaje" required></textarea>
+
+            <button type="submit">Enviar Consulta</button>
+        </form>
+
+        <p>Email: contacto@tuempresa.com | Teléfono: +123 456 7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Gestoría Visa B1/B2. Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=TU_CLIENT_ID&currency=USD"></script>
+    <script>
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '150.00'
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    alert('Pago completado por ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+
+</body>
+
+</html>
