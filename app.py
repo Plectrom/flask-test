@@ -27,5 +27,9 @@ def index(myintvar=0):
 def user(name):
     return render_template('user.html', name=name)
 
+@app.route('/visa')
+def user():
+    return render_template('visa.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
